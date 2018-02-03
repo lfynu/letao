@@ -1,0 +1,51 @@
+@import "./base.less";
+
+#main{
+    padding: 45px 0;
+    .left-content{
+        position: absolute;
+        top: 45px;
+        left: 0;
+        >ul{
+            width: 90px;
+            >li{
+                >a{
+                    display: block;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 12px;
+                    border: 1px solid #ccc;
+                    text-align: center;
+                    &.active{
+                        background-color: #ccc;
+                    }
+                }
+            }
+        }
+    }
+    .right-content{
+        margin-left: 90px;
+        right: 0;
+        top: 45px;
+        width: auto;
+        padding-top: 10px;
+        padding-left: 10px;
+        // height: 100%;
+        .mui-scroll{
+            height: 101%;
+            .mui-row{
+                // width: 50%;
+                background-color: #fff;
+                .mui-col-xs-4{
+                    >a{
+                        display: block;
+                        text-align: center;
+                        >img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

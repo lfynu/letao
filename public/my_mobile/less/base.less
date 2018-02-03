@@ -1,0 +1,150 @@
+/* 定义京东主体色变量 */
+
+@main-color: #006699;
+
+/* 清除浏览器的默认样式 */
+html,body{
+    height: 100%;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    /* 设置盒模型包含边框 padding和 内容 */
+    box-sizing: border-box;
+    /* 清除移动端点击高亮的背景色 （按住才有用）*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+input {
+    border: 0;
+    outline: 0;
+}
+
+img {
+    /* 去除图片对齐3px的问题 */
+    vertical-align: middle;
+}
+
+i {
+    font-style: normal;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+
+/* 公共类名 */
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+    line-height: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.bt {
+    border-top: 1px solid #ccc;
+}
+
+.br {
+    border-right: 1px solid #ccc;
+}
+
+.bb {
+    border-bottom: 1px solid #ccc;
+}
+
+.bl {
+    border-left: 1px solid #ccc; 
+}
+
+//头部栏
+#header{
+    height: 45px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: @main-color;
+    padding: 5px 0;
+    text-align: center;
+    color: #fff;
+    z-index: 999;
+    .search{
+        width: 100%;
+        padding: 0 50px;
+        >input{
+           height: 34px;
+           border-radius: 25px;
+           width: 100%;
+           font-size: 14px;
+           color: #000;
+        }
+    }
+    >h4{
+        font-weight: normal;
+        
+    }
+    .fa-search{
+        font-size: 18px;
+        color: #fff;
+        position: absolute;
+        right: 15px;
+        top: 13px;
+    }
+    .icon_back{
+        font-size: 18px;
+        color: #fff;
+        position: absolute;
+        left: 15px;
+        top: 13px;
+    }
+}
+//底部栏
+#footer{
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: @main-color;
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+    >div{
+        a{  
+            display: block;
+            width: 100%;
+            color: #fff;
+            padding: 6px;
+            >div{
+                // color: #fff;
+                font-size: 12px;
+            }
+            &.active{
+                color:orange;
+            }
+        }
+    }
+
+}
